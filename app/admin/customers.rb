@@ -14,6 +14,10 @@ ActiveAdmin.register Customer do
   #   permitted
   # end
 
+  show do
+    render partial: 'customers/customer', locals: { customer: customer, show_link: false }
+  end
+
   form do |f|
     f.inputs "Customer Details" do
       f.input :full_name

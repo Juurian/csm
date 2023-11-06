@@ -5,7 +5,8 @@ ruby "3.1.2"
 gem 'activeadmin', '2.11'
 gem 'devise'
 gem "sassc-rails"
-gem "bootsnap", require: false
+gem "bulma-rails"
+gem 'image_processing'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.8"
 

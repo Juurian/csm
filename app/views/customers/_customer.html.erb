@@ -1,0 +1,26 @@
+<div class="column">
+  <div class="card">
+    <div class="card-content">
+      <p class="title">
+        <%= customer.full_name %>
+      </p>
+
+      <p>Phone Number: <%= customer.phone_number %></p>
+      <p>Email: <%= customer.email %></p>
+      <% if customer.image.attached? %>
+      <p>Image:</p>
+        <div class="card-image">
+          <figure class="image">
+            <%= image_tag(customer.image.variant(resize_to_limit: [500,500])) %>
+          </figure>
+        </div>
+      <% end %>
+
+    </div>
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        Notes: <br><%= customer.notes %>
+      </p>
+    </footer>
+  </div>
+</div>
