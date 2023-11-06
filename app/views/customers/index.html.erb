@@ -1,0 +1,19 @@
+<div class="columns">
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <p class="title">Actions</p>
+        <%= link_to "Customers with Missing Email", missing_email_customers_path, class: "button is-link" %>
+        <%= link_to "Alphabetized Customers", alphabetized_customers_path, class: "button is-link" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="columns is-multiline">
+  <% @customers.each do |customer| %>
+    <div class="column is-4">
+      <%= render partial: 'customer', locals: { customer: customer } %>
+    </div>
+  <% end %>
+</div>

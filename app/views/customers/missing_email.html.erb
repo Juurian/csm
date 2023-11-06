@@ -1,0 +1,10 @@
+  <div class="column is-12">
+    <%= link_to "Back", customers_path, class: "button is-primary mb-3" %>
+  </div>
+<div class="columns is-multiline">
+  <% @customers.each do |customer| %>
+    <div class="column is-4 custom-margin">
+      <%= render partial: 'customer', locals: { customer: customer } %>
+    </div>
+  <% end %>
+</div>
